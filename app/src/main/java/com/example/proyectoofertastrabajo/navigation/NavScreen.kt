@@ -12,4 +12,5 @@ enum class NavScreen {
     Notification,
     CrearConvocatoria,
     VisualPdf,
+    LogoutScreen
 }

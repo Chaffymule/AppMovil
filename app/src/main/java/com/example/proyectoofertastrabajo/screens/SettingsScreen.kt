@@ -1,6 +1,8 @@
 package com.example.proyectoofertastrabajo.screens
 
+import android.util.Log
 import android.widget.Toast
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
@@ -9,16 +11,23 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.example.proyectoofertastrabajo.models.UserProfile
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SettingsScreen(navController: NavHostController, drawerState: DrawerState, scope: CoroutineScope) {
+fun SettingsScreen(
+    navController: NavHostController,
+    drawerState: DrawerState,
+    scope: CoroutineScope
+) {
     var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var phone by remember { mutableStateOf("") }
@@ -38,7 +47,6 @@ fun SettingsScreen(navController: NavHostController, drawerState: DrawerState, s
                 .padding(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Botón para regresar en la parte superior izquierda
             IconButton(
                 onClick = { navController.popBackStack() },
                 modifier = Modifier.padding(8.dp)
@@ -106,19 +114,14 @@ fun SettingsScreen(navController: NavHostController, drawerState: DrawerState, s
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        Spacer(modifier = Modifier.height(16.dp))
-
         Button(
             onClick = {
-                // Aquí puedes agregar la lógica para guardar la configuración del perfil
-                Toast.makeText(context, "Perfil actualizado", Toast.LENGTH_SHORT).show()
-                navController.popBackStack()
+
             },
             modifier = Modifier.fillMaxWidth()
         ) {
-
-
             Text("Guardar")
         }
     }
 }
+

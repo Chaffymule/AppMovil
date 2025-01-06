@@ -79,7 +79,7 @@ fun BancoNav(
             UploadPdfScreen(navController = navController, drawerState = drawerState, scope = scope)
         }
         composable(NavScreen.SettingsScreen.name) {
-            SettingsScreen(navController = navController, drawerState = drawerState, scope = scope)
+            SettingsScreen(navController = navController, drawerState = drawerState, scope = scope, )
         }
         composable(NavScreen.HelpScreen.name) {
             HelpScreen(navController = navController, drawerState = drawerState, scope = scope)

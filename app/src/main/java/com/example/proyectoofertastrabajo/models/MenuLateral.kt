@@ -16,4 +16,6 @@ sealed class MenuLateral(
     object Settings : MenuLateral(Icons.Outlined.Settings, "Configuración", NavScreen.SettingsScreen.name)
     object Help : MenuLateral(Icons.Outlined.Info, "Ayuda", NavScreen.HelpScreen.name)
     object CrearConvocatorias: MenuLateral(Icons.Outlined.Add, "Crear Convocatoria", NavScreen.CrearConvocatoria.name)
+    object Logout: MenuLateral(Icons.Outlined.ExitToApp, "Salir", NavScreen.LogoutScreen.name)
+
 }

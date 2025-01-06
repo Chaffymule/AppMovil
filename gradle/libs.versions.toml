@@ -19,6 +19,7 @@ constraintlayout = "2.1.4"
 navigationRuntimeKtx = "2.8.3"
 navigationCompose = "2.8.3"
 protoliteWellKnownTypes = "18.0.0"
+firebaseFirestoreKtx = "25.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,6 +47,7 @@ androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navig
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 protolite-well-known-types = { group = "com.google.firebase", name = "protolite-well-known-types", version.ref = "protoliteWellKnownTypes" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converterGson" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
